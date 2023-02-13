@@ -24,7 +24,7 @@ param parSubnets array = [
     ipAddressRange: '10.10.252.0/24'
   }
   {
-    name: 'AzureFirewallSubnet'
+    name: 'FirewallSubnet'
     ipAddressRange: '10.10.254.0/24'
   }
 ]
@@ -40,7 +40,7 @@ param parDnsServerIps array = []
 param parPublicIpSku string = 'Standard'
 
 @sys.description('Switch to enable/disable Azure Bastion deployment. Default: true')
-param parAzBastionEnabled bool = true
+param parAzBastionEnabled bool = false
 
 @sys.description('Name Associated with Bastion Service.')
 param parAzBastionName string = '${parCompanyPrefix}-bastion'
@@ -52,13 +52,13 @@ param parAzBastionSku string = 'Standard'
 param parAzBastionNsgName string = 'nsg-AzureBastionSubnet'
 
 @sys.description('Switch to enable/disable DDoS Network Protection deployment.')
-param parDdosEnabled bool = true
+param parDdosEnabled bool = false
 
 @sys.description('DDoS Plan Name.')
 param parDdosPlanName string = '${parCompanyPrefix}-ddos-plan'
 
 @sys.description('Switch to enable/disable Azure Firewall deployment.')
-param parAzFirewallEnabled bool = true
+param parAzFirewallEnabled bool = false
 
 @sys.description('Azure Firewall Name.')
 param parAzFirewallName string = '${parCompanyPrefix}-azfw-${parLocation}'
@@ -107,7 +107,7 @@ param parHubRouteTableName string = '${parCompanyPrefix}-hub-routetable'
 param parDisableBgpRoutePropagation bool = false
 
 @sys.description('Switch to enable/disable Private DNS Zones deployment.')
-param parPrivateDnsZonesEnabled bool = true
+param parPrivateDnsZonesEnabled bool = false
 
 @sys.description('Resource Group Name for Private DNS Zones.')
 param parPrivateDnsZonesResourceGroup string = resourceGroup().name

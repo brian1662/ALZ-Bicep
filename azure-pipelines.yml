@@ -5,15 +5,15 @@ pool:
 
 variables:
   ServiceConnectionName: "IURmicroagemanitoba"
-  ManagementGroupPrefix: "alz"
+  ManagementGroupPrefix: "ALZ"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "canadacentral"
-  LoggingSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  LoggingSubId: "de173830-a0f7-43a7-8a5e-a1a752915996"
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  HubNetworkSubId: "38a380bc-2acf-4c50-aacb-9f9377f47f02"
   HubNetworkResourceGroupName: "Hub_Networking"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  SpokeNetworkSubId: "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
   SpokeNetworkResourceGroupName: "Spoke_Networking"
   RunNumber: $(Build.BuildNumber)
 

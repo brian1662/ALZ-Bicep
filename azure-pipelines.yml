@@ -5,7 +5,7 @@ pool:
 
 variables:
   ServiceConnectionName: "IURmicroagemanitoba"
-  ManagementGroupPrefix: "ALZ"
+  ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "canadacentral"
   LoggingSubId: "de173830-a0f7-43a7-8a5e-a1a752915996"

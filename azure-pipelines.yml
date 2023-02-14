@@ -25,7 +25,7 @@ jobs:
     displayName: Az CLI Deploy Management Groups
     name: create_mgs
     inputs:
-      azureSubscription: 'IURmicroagemanitoba'
+      azureSubscription: $(ServiceConnectionName)
       scriptType: 'bash'
       scriptLocation: 'inlineScript'
       inlineScript: |

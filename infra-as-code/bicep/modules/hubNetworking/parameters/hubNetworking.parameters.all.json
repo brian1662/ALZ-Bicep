@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parLocation": {
-      "value": "eastus"
+      "value": "canadacentral"
     },
     "parCompanyPrefix": {
       "value": "alz"
     },
     "parHubNetworkName": {
-      "value": "alz-hub-eastus"
+      "value": "alz-hub-canadacentral"
     },
     "parHubNetworkAddressPrefix": {
       "value": "10.20.0.0/16"
@@ -25,7 +25,7 @@
           "ipAddressRange": "10.20.254.0/24"
         },
         {
-          "name": "AzureFirewallSubnet",
+          "name": "FirewallSubnet",
           "ipAddressRange": "10.20.255.0/24"
         }
       ]
@@ -37,7 +37,7 @@
       "value": "Standard"
     },
     "parAzBastionEnabled": {
-      "value": true
+      "value": false
     },
     "parAzBastionName": {
       "value": "alz-bastion"
@@ -49,19 +49,19 @@
       "value": "nsg-AzureBastionSubnet"
     },
     "parDdosEnabled": {
-      "value": true
+      "value": false
     },
     "parDdosPlanName": {
       "value": "alz-ddos-plan"
     },
     "parAzFirewallEnabled": {
-      "value": true
+      "value": false
     },
     "parAzFirewallName": {
-      "value": "alz-azfw-eastus"
+      "value": "alz-azfw-canadacentral"
     },
     "parAzFirewallPoliciesName": {
-      "value": "alz-azfwpolicy-eastus"
+      "value": "alz-azfwpolicy-canadacentral"
     },
     "parAzFirewallTier": {
       "value": "Standard"
@@ -85,7 +85,7 @@
       "value": false
     },
     "parPrivateDnsZonesEnabled": {
-      "value": true
+      "value": false
     },
     "parPrivateDnsZones": {
       "value": [
@@ -200,7 +200,7 @@
     },
     "parTags": {
       "value": {
-        "Environment": "POC"
+        "Environment": "Production"
       }
     },
     "parTelemetryOptOut": {

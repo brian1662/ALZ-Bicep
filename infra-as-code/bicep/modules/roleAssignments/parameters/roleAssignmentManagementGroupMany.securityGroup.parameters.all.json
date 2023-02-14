@@ -4,18 +4,17 @@
   "parameters": {
     "parManagementGroupIds": {
       "value": [
-        "alz-platform-connectivity",
-        "alz-platform-identity"
+        "alz"
       ]
     },
     "parRoleDefinitionId": {
-      "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      "value": "c41da26f-f3a2-5cbb-a127-bf227b054afa"
     },
     "parAssigneePrincipalType": {
       "value": "Group"
     },
     "parAssigneeObjectId": {
-      "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      "value": "4a423eef-1b37-4f0d-9fc2-d8a2eb095f7a"
     },
     "parTelemetryOptOut": {
       "value": false

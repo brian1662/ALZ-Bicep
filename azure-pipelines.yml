@@ -4,7 +4,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  ServiceConnectionName: "IURmicroagemanitoba"
+  ServiceConnectionName: "IURbicepALZ"
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "canadacentral"

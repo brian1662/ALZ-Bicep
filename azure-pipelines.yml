@@ -134,7 +134,7 @@ jobs:
       scriptLocation: 'inlineScript'
       inlineScript: |
         az deployment mg create \
-        --template-file infra-as-code/bicep/modules/roleAssignments/roleAssignmentManagementGroup.bicep \
+        --template-file infra-as-code/bicep/modules/roleAssignments/roleAssignmentManagementGroupMany.bicep \
         --parameters @infra-as-code/bicep/modules/roleAssignments/parameters/roleAssignmentManagementGroupMany.securityGroup.parameters.all.json \
         --location $(Location) \
         --management-group-id $(RoleAssignmentManagementGroupId) \

@@ -15,22 +15,32 @@ param parIntRootMgSubs array = []
 param parPlatformMgSubs array = []
 
 @sys.description('An array of Subscription IDs to place in the (Platform) Management Management Group. Default: Empty Array')
-param parPlatformManagementMgSubs array = []
+param parPlatformManagementMgSubs array = [
+  'de173830-a0f7-43a7-8a5e-a1a752915996'
+  ]
 
 @sys.description('An array of Subscription IDs to place in the (Platform) Connectivity Management Group. Default: Empty Array')
-param parPlatformConnectivityMgSubs array = []
+param parPlatformConnectivityMgSubs array = [
+  '38a380bc-2acf-4c50-aacb-9f9377f47f02'
+  ]
 
 @sys.description('An array of Subscription IDs to place in the (Platform) Identity Management Group. Default: Empty Array')
-param parPlatformIdentityMgSubs array = []
+param parPlatformIdentityMgSubs array = [
+  'ec4cba6c-2cf0-4d74-9a95-1e47ae1b70d6'
+  ]
 
 @sys.description('An array of Subscription IDs to place in the Landing Zones Management Group. Default: Empty Array')
 param parLandingZonesMgSubs array = []
 
 @sys.description('An array of Subscription IDs to place in the Corp (Landing Zones) Management Group. Default: Empty Array')
-param parLandingZonesCorpMgSubs array = []
+param parLandingZonesCorpMgSubs array = [
+  '7fbfadc5-a4c7-4617-8f3e-a33afb3292da'
+  ]
 
 @sys.description('An array of Subscription IDs to place in the Online (Landing Zones) Management Group. Default: Empty Array')
-param parLandingZonesOnlineMgSubs array = []
+param parLandingZonesOnlineMgSubs array = [
+  '78fdef03-48c0-4d84-b612-f819ef48ce66'
+  ]
 
 @sys.description('An array of Subscription IDs to place in the Confidential Corp (Landing Zones) Management Group. Default: Empty Array')
 param parLandingZonesConfidentialCorpMgSubs array = []

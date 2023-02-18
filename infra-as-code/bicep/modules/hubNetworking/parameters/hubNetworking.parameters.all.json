@@ -89,10 +89,10 @@
     },
     "parPrivateDnsZones": {
       "value": [
-        "privatelink.xxxxxx.azmk8s.io", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.batch.azure.com", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.kusto.windows.net", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.backup.windowsazure.com", // Replace xxxxxx with target region geo code (i.e. for eastus, the geo code is eus)
+        "privatelink.canadacentral.azmk8s.io", // Replace xxxxxx with target region (i.e. eastus)
+        "privatelink.canadacentral.batch.azure.com", // Replace xxxxxx with target region (i.e. eastus)
+        "privatelink.canadacentral.kusto.windows.net", // Replace xxxxxx with target region (i.e. eastus)
+        "privatelink.cdc.backup.windowsazure.com", // Replace xxxxxx with target region geo code (i.e. for eastus, the geo code is eus)
         "privatelink.adf.azure.com",
         "privatelink.afs.azure.net",
         "privatelink.agentsvc.azure-automation.net",

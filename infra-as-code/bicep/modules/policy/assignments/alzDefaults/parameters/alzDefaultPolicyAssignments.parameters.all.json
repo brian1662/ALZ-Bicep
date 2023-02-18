@@ -21,10 +21,10 @@
       "value": "support@microagemanitoba.com"
     },
     "parDdosProtectionPlanId": {
-      "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub-Networking/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
+      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
     },
     "parPrivateDnsResourceGroupId": {
-      "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub-Networking"
+      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001"
     },
     "parTelemetryOptOut": {
       "value": false

@@ -6,10 +6,10 @@
       "value": "alz"
     },
     "parLogAnalyticsWorkSpaceAndAutomationAccountLocation": {
-      "value": "eastus"
+      "value": "canadacentral"
     },
     "parLogAnalyticsWorkspaceResourceId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/alz-log-analytics"
+      "value": "/subscriptions/de173830-a0f7-43a7-8a5e-a1a752915996/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/alz-log-analytics"
     },
     "parLogAnalyticsWorkspaceLogRetentionInDays": {
       "value": "365"
@@ -21,13 +21,12 @@
       "value": "security_contact@replace_me.com"
     },
     "parDdosProtectionPlanId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
+      "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub-Networking/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
     },
     "parPrivateDnsResourceGroupId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001"
+      "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub-Networking"
     },
     "parTelemetryOptOut": {
       "value": false
     }
   }
-}

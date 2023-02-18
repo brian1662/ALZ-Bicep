@@ -18,7 +18,7 @@
       "value": "alz-automation-account"
     },
     "parMsDefenderForCloudEmailSecurityContact": {
-      "value": "security_contact@replace_me.com"
+      "value": "support@microagemanitoba.com"
     },
     "parDdosProtectionPlanId": {
       "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub-Networking/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"

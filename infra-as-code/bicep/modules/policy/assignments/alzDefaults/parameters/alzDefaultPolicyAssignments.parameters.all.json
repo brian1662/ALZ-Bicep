@@ -20,12 +20,6 @@
     "parMsDefenderForCloudEmailSecurityContact": {
       "value": "support@microagemanitoba.com"
     },
-    "parDdosProtectionPlanId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
-    },
-    "parPrivateDnsResourceGroupId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-alz-hub-networking-001"
-    },
     "parTelemetryOptOut": {
       "value": false
     }

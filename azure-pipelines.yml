@@ -149,8 +149,8 @@ jobs:
       scriptLocation: 'inlineScript'
       inlineScript: |
         az deployment mg create \
-        --template-file infra-as-code/bicep/modules/subscriptionPlacement/subscriptionPlacement.bicep \
-        --parameters @infra-as-code/bicep/modules/subscriptionPlacement/parameters/subscriptionPlacement.parameters.all.json \
+        --template-file infra-as-code/bicep/orchestration/subPlacementAll/subPlacementAll.bicep \
+        --parameters @infra-as-code/bicep/orchestration/subPlacementAll/parameters/subPlacementAll.parameters.all.json \
         --location $(Location) \
         --management-group-id $(ManagementGroupPrefix) \
         --name create_subscription_placement-$(RunNumber)

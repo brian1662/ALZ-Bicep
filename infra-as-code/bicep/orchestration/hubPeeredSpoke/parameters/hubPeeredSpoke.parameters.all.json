@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "parLocation": {
-        "value": "westeurope"
+        "value": "canadacentral"
       },
       "parTopLevelManagementGroupPrefix": {
         "value": "alz"
       },
       "parPeeredVnetSubscriptionId": {
-        "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        "value": "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
       },
       "parPeeredVnetSubscriptionMgPlacement": {
         "value": "alz-platform-connectivity"

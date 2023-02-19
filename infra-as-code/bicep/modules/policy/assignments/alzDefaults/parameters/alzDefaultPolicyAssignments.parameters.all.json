@@ -20,6 +20,9 @@
     "parMsDefenderForCloudEmailSecurityContact": {
       "value": "support@microagemanitoba.com"
     },
+    "parDisableAlzDefaultPolicies": {
+      "value": false
+    },
     "parTelemetryOptOut": {
       "value": false
     }

@@ -124,6 +124,21 @@ jobs:
         --template-file infra-as-code/bicep/modules/hubNetworking/hubNetworking.bicep \
         --parameters @infra-as-code/bicep/modules/hubNetworking/parameters/hubNetworking.parameters.all.json \
         --name create_hub_network-$(RunNumber)
+        
+  - task: AzureCLI@2
+    displayName: Az CLI Deploy Subscription Placement
+    name: create_subscription_placement
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az deployment mg create \
+        --template-file infra-as-code/bicep/orchestration/subPlacementAll/subPlacementAll.bicep \
+        --parameters @infra-as-code/bicep/orchestration/subPlacementAll/parameters/subPlacementAll.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(ManagementGroupPrefix) \
+        --name create_subscription_placement-$(RunNumber)
 
   - task: AzureCLI@2
     displayName: Az CLI Deploy Role Assignment
@@ -184,18 +199,3 @@ jobs:
         --template-file infra-as-code/bicep/modules/spokeNetworking/spokeNetworking.bicep \
         --parameters @infra-as-code/bicep/modules/spokeNetworking/parameters/spokeNetworking.parameters.all.json \
         --name create_spoke_network-$(RunNumber)
-        
-  - task: AzureCLI@2
-    displayName: Az CLI Deploy Subscription Placement
-    name: create_subscription_placement
-    inputs:
-      azureSubscription: $(ServiceConnectionName)
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: |
-        az deployment mg create \
-        --template-file infra-as-code/bicep/orchestration/subPlacementAll/subPlacementAll.bicep \
-        --parameters @infra-as-code/bicep/orchestration/subPlacementAll/parameters/subPlacementAll.parameters.all.json \
-        --location $(Location) \
-        --management-group-id $(ManagementGroupPrefix) \
-        --name create_subscription_placement-$(RunNumber)

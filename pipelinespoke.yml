@@ -22,6 +22,21 @@ jobs:
   steps:
 
   - task: AzureCLI@2
+    displayName: Az CLI Deploy Subscription Placement
+    name: create_subscription_placement
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az deployment mg create \
+        --template-file infra-as-code/bicep/orchestration/subPlacementAll/subPlacementAll.bicep \
+        --parameters @infra-as-code/bicep/orchestration/subPlacementAll/parameters/subPlacementAll.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(ManagementGroupPrefix) \
+        --name create_subscription_placement-$(RunNumber)
+
+  - task: AzureCLI@2
     displayName: Az CLI Deploy Spoke Network
     name: create_spoke_network
     inputs:

@@ -34,7 +34,7 @@ jobs:
         --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
         --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \
         --location $(Location) \
-        --ResourceGroupName $(SpokeNetworkResourceGroupName) \
+        --ResourceGroup $(SpokeNetworkResourceGroupName) \
         --management-group-id $(ManagementGroupPrefix) \
         --name create_spoke_network-$(RunNumber)
         

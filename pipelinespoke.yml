@@ -33,6 +33,8 @@ jobs:
         az deployment group create \
         --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
         --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(ManagementGroupPrefix) \
         --name create_spoke_network-$(RunNumber)
         
   - task: AzureCLI@2

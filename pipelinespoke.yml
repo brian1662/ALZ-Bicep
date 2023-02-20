@@ -21,7 +21,7 @@ jobs:
 - job:
   steps:
 
-- task: AzureCLI@2
+  - task: AzureCLI@2
     displayName: Az CLI Deploy Spoke Network Resource Group
     name: create_spoke_network_rg
     inputs:

@@ -1,4 +1,4 @@
-targetScope = 'managementGroup'
+targetScope = 'alz'
 
 metadata name = 'ALZ Bicep - Orchestration - Hub Peered Spoke'
 metadata description = 'Orchestration module used to create and configure a spoke network to deliver the Azure Landing Zone Hub & Spoke architecture'

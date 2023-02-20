@@ -31,8 +31,6 @@ jobs:
       inlineScript: |
         az account set --subscription $(SpokeNetworkSubId)
         az deployment group create \
-        --location $(Location) \
-        --management-group-id $(ManagementGroupPrefix) \
         --resource-group $(SpokeNetworkResourceGroupName) \
         --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
         --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \

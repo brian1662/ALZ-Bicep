@@ -39,17 +39,19 @@ jobs:
   - task: AzureCLI@2
     displayName: Az CLI Deploy Spoke Network
     name: create_spoke_network
-      # For Azure global regions
-
-      $inputObject = @{
-       DeploymentName        = 'alz-HubPeeredSpoke-{0}' -f (-join (Get-Date -Format 'yyyyMMddTHHMMssffffZ')[0..63])
-       Location              = 'canadacentral'
-       ManagementGroupId     = 'alz'
-       TemplateFile          = "infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep"
-       TemplateParameterFile = 'infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json'
-      }
-
-      New-AzManagementGroupDeployment @inputObject
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az account set --subscription $(SpokeNetworkSubId)
+        az deployment group create \
+        --resource-group $(SpokeNetworkResourceGroupName) \
+        --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
+        --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(ManagementGroupPrefix) \
+        --name create_spoke_network-$(RunNumber)
         
   - task: AzureCLI@2
     displayName: Az CLI Deploy Role Assignment

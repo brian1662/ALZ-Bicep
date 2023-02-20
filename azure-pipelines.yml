@@ -124,6 +124,36 @@ jobs:
         --template-file infra-as-code/bicep/modules/hubNetworking/hubNetworking.bicep \
         --parameters @infra-as-code/bicep/modules/hubNetworking/parameters/hubNetworking.parameters.all.json \
         --name create_hub_network-$(RunNumber)
+    
+  - task: AzureCLI@2
+    displayName: Az CLI Deploy Spoke Network Resource Group
+    name: create_spoke_network_rg
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az account set --subscription $(SpokeNetworkSubId)
+        az deployment sub create \
+        --template-file infra-as-code/bicep/modules/resourceGroup/resourceGroup.bicep \
+        --parameters parResourceGroupName=$(SpokeNetworkResourceGroupName) parLocation=$(Location) \
+        --location $(Location) \
+        --name create_spoke_network_rg-$(RunNumber)
+
+  - task: AzureCLI@2
+    displayName: Az CLI Deploy Spoke Network
+    name: create_spoke_network
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az account set --subscription $(SpokeNetworkSubId)
+        az deployment group create \
+        --resource-group $(SpokeNetworkResourceGroupName) \
+        --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
+        --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \
+        --name create_spoke_network-$(RunNumber)
         
   - task: AzureCLI@2
     displayName: Az CLI Deploy Subscription Placement
@@ -169,33 +199,3 @@ jobs:
         --location $(Location) \
         --management-group-id $(ManagementGroupPrefix) \
         --name create_policy_assignments-$(RunNumber)
-
-  - task: AzureCLI@2
-    displayName: Az CLI Deploy Spoke Network Resource Group
-    name: create_spoke_network_rg
-    inputs:
-      azureSubscription: $(ServiceConnectionName)
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: |
-        az account set --subscription $(SpokeNetworkSubId)
-        az deployment sub create \
-        --template-file infra-as-code/bicep/modules/resourceGroup/resourceGroup.bicep \
-        --parameters parResourceGroupName=$(SpokeNetworkResourceGroupName) parLocation=$(Location) \
-        --location $(Location) \
-        --name create_spoke_network_rg-$(RunNumber)
-
-  - task: AzureCLI@2
-    displayName: Az CLI Deploy Spoke Network
-    name: create_spoke_network
-    inputs:
-      azureSubscription: $(ServiceConnectionName)
-      scriptType: 'bash'
-      scriptLocation: 'inlineScript'
-      inlineScript: |
-        az account set --subscription $(SpokeNetworkSubId)
-        az deployment group create \
-        --resource-group $(SpokeNetworkResourceGroupName) \
-        --template-file infra-as-code/bicep/orchestration/hubPeeredSpoke/hubPeeredSpoke.bicep \
-        --parameters @infra-as-code/bicep/orchestration/hubPeeredSpoke/parameters/hubPeeredSpoke.parameters.all.json \
-        --name create_spoke_network-$(RunNumber)

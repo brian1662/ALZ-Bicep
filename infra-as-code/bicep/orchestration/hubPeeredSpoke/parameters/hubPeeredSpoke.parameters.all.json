@@ -3,19 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "parLocation": {
-        "value": "canadacentral"
+        "value": "westeurope"
       },
       "parTopLevelManagementGroupPrefix": {
         "value": "alz"
       },
       "parPeeredVnetSubscriptionId": {
-        "value": "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
+        "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
       },
       "parPeeredVnetSubscriptionMgPlacement": {
-        "value": "alz-landingzones-corp"
-      },
-      "parResourceGroupName": {
-        "value": "alz-canadacentral-spoke-networking"
+        "value": "alz-platform-connectivity"
       },
       "parDdosProtectionPlanId": {
         "value": ""
@@ -39,7 +36,7 @@
         "value": "rtb-spoke-to-hub"
       },
       "parHubVirtualNetworkId": {
-        "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub_Networking/providers/Microsoft.Network/virtualNetworks/alz-hub-canadacentral"
+        "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-westeurope-hub-networking/providers/Microsoft.Network/virtualNetworks/alz-hub-westeurope"
       },
       "parAllowSpokeForwardedTraffic": {
         "value": false
@@ -49,7 +46,7 @@
       },
       "parTags": {
         "value": {
-          "Environment": "Production"
+          "Environment": "POC"
         }
       },
       "parTelemetryOptOut": {

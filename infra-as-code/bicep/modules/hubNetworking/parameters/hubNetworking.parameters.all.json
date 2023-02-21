@@ -159,10 +159,10 @@
       ]
     },
     "parVpnGatewayConfig": {
-      "value": []
+      "value": {}
     },
     "parExpressRouteGatewayConfig": {
-      "value": []
+      "value": {}
     },
     "parTags": {
       "value": {

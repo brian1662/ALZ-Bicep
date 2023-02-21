@@ -126,6 +126,21 @@ jobs:
         --name create_hub_network-$(RunNumber)
 
   - task: AzureCLI@2
+    displayName: Az CLI Deploy Role Assignment
+    name: create_role_assignment
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az deployment mg create \
+        --template-file infra-as-code/bicep/modules/roleAssignments/roleAssignmentManagementGroupMany.bicep \
+        --parameters @infra-as-code/bicep/modules/roleAssignments/parameters/roleAssignmentManagementGroupMany.securityGroup.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(RoleAssignmentManagementGroupId) \
+        --name create_role_assignment-$(RunNumber)
+
+  - task: AzureCLI@2
     displayName: Az CLI Deploy Spoke Network Resource Group
     name: create_spoke_network_rg
     inputs:

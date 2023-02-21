@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "parLocation": {
-        "value": "westeurope"
+        "value": "canadacentral"
       },
       "parTopLevelManagementGroupPrefix": {
         "value": "alz"
       },
       "parPeeredVnetSubscriptionId": {
-        "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        "value": "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
       },
       "parPeeredVnetSubscriptionMgPlacement": {
-        "value": "alz-platform-connectivity"
+        "value": "alz-landingzones-corp"
       },
       "parDdosProtectionPlanId": {
         "value": ""
@@ -36,7 +36,7 @@
         "value": "rtb-spoke-to-hub"
       },
       "parHubVirtualNetworkId": {
-        "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-westeurope-hub-networking/providers/Microsoft.Network/virtualNetworks/alz-hub-westeurope"
+        "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub_Networking/providers/Microsoft.Network/virtualNetworks/alz-hub-canadacentral"
       },
       "parAllowSpokeForwardedTraffic": {
         "value": false
@@ -46,7 +46,7 @@
       },
       "parTags": {
         "value": {
-          "Environment": "POC"
+          "Environment": "Production"
         }
       },
       "parTelemetryOptOut": {

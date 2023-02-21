@@ -4,16 +4,16 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  ServiceConnectionName: "SPiurALZ"
+  ServiceConnectionName: "Glenboro"
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "canadacentral"
-  LoggingSubId: "de173830-a0f7-43a7-8a5e-a1a752915996"
+  LoggingSubId: "ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a"
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: "38a380bc-2acf-4c50-aacb-9f9377f47f02"
+  HubNetworkSubId: "ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a"
   HubNetworkResourceGroupName: "Hub_Networking"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
+  SpokeNetworkSubId: "4434ecdd-37a4-45e0-9a29-fd89bd29356b"
   SpokeNetworkResourceGroupName: "Spoke_Networking"
   RunNumber: $(Build.BuildNumber)
 

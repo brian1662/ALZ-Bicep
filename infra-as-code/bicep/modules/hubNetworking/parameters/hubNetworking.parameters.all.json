@@ -159,11 +159,9 @@
       ]
     },
     "parVpnGatewayConfig": {
-      "value": {}
-    },,,}
+    },
     "parExpressRouteGatewayConfig": {
-      "value": {}
-    },,,}
+    },
     "parTags": {
       "value": {
         "Environment": "Production"

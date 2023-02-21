@@ -6,7 +6,7 @@
       "value": "alz-log-analytics"
     },
     "parLogAnalyticsWorkspaceLocation": {
-      "value": "eastus"
+      "value": "canadacentral"
     },
     "parLogAnalyticsWorkspaceSkuName": {
       "value": "PerGB2018"
@@ -33,14 +33,14 @@
       "value": "alz-automation-account"
     },
     "parAutomationAccountLocation": {
-      "value": "eastus2"
+      "value": "canadacentral"
     },
     "parAutomationAccountUseManagedIdentity": {
       "value": true
     },
     "parTags": {
       "value": {
-        "Environment": "POC"
+        "Environment": "Production"
       }
     },
     "parTelemetryOptOut": {

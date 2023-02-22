@@ -159,24 +159,7 @@
       ]
     },
     "parVpnGatewayConfig": {
-      "value": {
-        "name": "alz-Vpn-Gateway",
-        "gatewayType": "Vpn",
-        "sku": "Basic",
-        "vpnType": "RouteBased",
-        "generation": "Generation1",
-        "enableBgp": false,
-        "activeActive": false,
-        "enableBgpRouteTranslationForNat": false,
-        "enableDnsForwarding": false,
-        "asn": "65515",
-        "bgpPeeringAddress": "",
-        "bgpsettings": {
-          "asn": "65515",
-          "bgpPeeringAddress": "",
-          "peerWeight": "5"
-        }
-      }
+      "value": {}
     },
     "parExpressRouteGatewayConfig": {
       "value": {}

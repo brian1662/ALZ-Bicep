@@ -4,16 +4,16 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  ServiceConnectionName: "Glenboro"
+  ServiceConnectionName: "Endhomelessness"
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
   Location: "canadacentral"
-  LoggingSubId: "ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a"
+  LoggingSubId: "51fb4bc1-1b7d-491c-bc13-dbce2632df1e"
   LoggingResourceGroupName: "alz-logging"
-  HubNetworkSubId: "ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a"
+  HubNetworkSubId: "51fb4bc1-1b7d-491c-bc13-dbce2632df1e"
   HubNetworkResourceGroupName: "Hub_Networking"
   RoleAssignmentManagementGroupId: "alz-platform"
-  SpokeNetworkSubId: "4434ecdd-37a4-45e0-9a29-fd89bd29356b"
+  SpokeNetworkSubId: "eaaf01cd-544c-4fdd-a86e-f2df44337b94"
   SpokeNetworkResourceGroupName: "Spoke_Networking"
   RunNumber: $(Build.BuildNumber)
 

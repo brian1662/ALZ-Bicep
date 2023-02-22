@@ -12,22 +12,22 @@
       "value": []
     },
     "parPlatformManagementMgSubs": {
-      "value": ["51fb4bc1-1b7d-491c-bc13-dbce2632df1e"]
+      "value": ["de173830-a0f7-43a7-8a5e-a1a752915996"]
     },
     "parPlatformConnectivityMgSubs": {
-      "value": []
+      "value": ["38a380bc-2acf-4c50-aacb-9f9377f47f02"]
     },
     "parPlatformIdentityMgSubs": {
-      "value": []
+      "value": ["ec4cba6c-2cf0-4d74-9a95-1e47ae1b70d6"]
     },
     "parLandingZonesMgSubs": {
-      "value": ["eaaf01cd-544c-4fdd-a86e-f2df44337b94"]
+      "value": []
     },
     "parLandingZonesCorpMgSubs": {
-      "value": []
+      "value": ["7fbfadc5-a4c7-4617-8f3e-a33afb3292da"]
     },
     "parLandingZonesOnlineMgSubs": {
-      "value": []
+      "value": ["78fdef03-48c0-4d84-b612-f819ef48ce66"]
     },
     "parLandingZonesConfidentialCorpMgSubs": {
       "value": []

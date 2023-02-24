@@ -39,7 +39,7 @@
         "value": "/subscriptions/ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a/resourceGroups/Hub_Networking/providers/Microsoft.Network/virtualNetworks/alz-hub-canadacentral"
       },
       "parAllowSpokeForwardedTraffic": {
-        "value": false
+        "value": true
       },
       "parAllowHubVPNGatewayTransit": {
         "value": true

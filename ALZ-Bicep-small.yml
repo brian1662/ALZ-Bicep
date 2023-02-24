@@ -131,7 +131,21 @@ jobs:
         --parameters @infra-as-code/bicep/modules/roleAssignments/parameters/roleAssignmentManagementGroupMany.securityGroup.parameters.all.json \
         --location $(Location) \
         --management-group-id $(RoleAssignmentManagementGroupId) \
-        --name create_role_assignment-$(RunNumber)
+        --name create_role_assignment-$(RunNumber)   
+  - task: AzureCLI@2
+    displayName: Deploy Default Policy Assignments
+    name: create_policy_assignments
+    inputs:
+      azureSubscription: $(ServiceConnectionName)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az deployment mg create \
+        --template-file infra-as-code/bicep/modules/policy/assignments/alzDefaults/alzDefaultPolicyAssignments.bicep \
+        --parameters @infra-as-code/bicep/modules/policy/assignments/alzDefaults/parameters/alzDefaultPolicyAssignments.parameters.all.json \
+        --location $(Location) \
+        --management-group-id $(ManagementGroupPrefix) \
+        --name create_policy_assignments-$(RunNumber)
   - task: AzureCLI@2
     displayName: Az CLI Deploy Spoke Network Resource Group
     name: create_spoke_network_rg

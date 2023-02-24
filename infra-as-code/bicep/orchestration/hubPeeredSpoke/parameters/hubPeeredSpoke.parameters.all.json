@@ -9,7 +9,7 @@
         "value": "alz"
       },
       "parPeeredVnetSubscriptionId": {
-        "value": "7fbfadc5-a4c7-4617-8f3e-a33afb3292da"
+        "value": "4434ecdd-37a4-45e0-9a29-fd89bd29356b"
       },
       "parPeeredVnetSubscriptionMgPlacement": {
         "value": "alz-landingzones-corp"
@@ -36,7 +36,7 @@
         "value": "rtb-spoke-to-hub"
       },
       "parHubVirtualNetworkId": {
-        "value": "/subscriptions/38a380bc-2acf-4c50-aacb-9f9377f47f02/resourceGroups/Hub_Networking/providers/Microsoft.Network/virtualNetworks/alz-hub-canadacentral"
+        "value": "/subscriptions/ad6f4ebc-81c7-49cf-b4a3-067aedaf4b7a/resourceGroups/Hub_Networking/providers/Microsoft.Network/virtualNetworks/alz-hub-canadacentral"
       },
       "parAllowSpokeForwardedTraffic": {
         "value": false

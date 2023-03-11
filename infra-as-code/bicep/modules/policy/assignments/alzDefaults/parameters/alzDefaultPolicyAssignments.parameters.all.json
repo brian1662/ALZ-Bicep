@@ -9,7 +9,7 @@
       "value": "canadacentral"
     },
     "parLogAnalyticsWorkspaceResourceId": {
-      "value": "/subscriptions/51fb4bc1-1b7d-491c-bc13-dbce2632df1e/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/alz-log-analytics"
+      "value": "/subscriptions/7968276c-8086-40ae-a0fb-149cf763204a/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/alz-log-analytics"
     },
     "parLogAnalyticsWorkspaceLogRetentionInDays": {
       "value": "365"
